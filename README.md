@@ -1,4 +1,4 @@
 bower-angular-resource
 ======================
 
-angular-resource bower repo
+angular-resource-hack bower repo

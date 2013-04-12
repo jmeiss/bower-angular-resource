@@ -3,6 +3,9 @@
  * (c) 2010-2012 Google, Inc. http://angularjs.org
  * License: MIT
  */
+ /*
+ AngularJS resource hacked based on this issue https://github.com/angular/angular.js/pull/1364
+*/
 (function(window, angular, undefined) {
 'use strict';
 
