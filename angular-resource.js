@@ -321,9 +321,13 @@ angular.module('ngResource', ['ng']).
         url = url.replace(/\/?#$/, '');
         var query = [];
         forEach(params, function(value, key){
-          if (!self.urlParams[key]) {
-            query.push(encodeUriQuery(key) + '=' + encodeUriQuery(value));
-          }
+          if (!(value.constructor == Array)) value = [value];
+          forEach(value, function(v) {
+            if (typeof (v) === 'object') {
+              v = toJson(v);
+            }
+            query.push(encodeUriQuery(key) + '=' + encodeUriQuery(v));
+          });
         });
         query.sort();
         url = url.replace(/\/*$/, '');
